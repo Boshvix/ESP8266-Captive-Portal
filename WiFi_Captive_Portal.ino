@@ -105,6 +105,7 @@ String postedSSID() {
   EEPROM.write(postedSSID.length(), '\0');
   EEPROM.commit();
   WiFi.softAP(postedSSID);
+  return ""; // Add this line to return an empty string
 }
 
 String clear() {
